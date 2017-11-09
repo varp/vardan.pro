@@ -1,0 +1,27 @@
+---
+layout: post
+title: Snort 2.9.7.0 and Daq 2.0.4
+date: '2015-01-14 04:57:00'
+tags:
+- trusty
+- ubuntu
+- daq
+- snort
+- pulledpork
+- linux
+---
+
+<h2>Intro</h2>
+<p>On past weekend I&rsquo;ve packaged latest stable versions of <a href="https://snort.org/" target="_blank">snort</a> and <a href="https://snort.org/" target="_blank">daq</a> for Ubuntu Trusty. I&rsquo;ve pushed the packages to my <a href="https://launchpad.net/~vardan-pogosyan/+archive/ubuntu/stable" title="PPA" target="_blank">PPA</a>. Enjoy and use it who it will be useful.</p>
+<h2>Upgrading</h2>
+```bash
+$ sudo service snort stop
+$ sudo apt-add-repository ppa:vardan-pogosyan/stable
+$ sudo apt-get update && sudo apt-get upgrade -y
+```
+<p>If you are using a <a href="https://code.google.com/p/pulledpork/" target="_blank">PulledPork</a>, go to the PulledPork config file in <em>/etc/pulledpork/pulledpork.conf</em> by default and change <em>snort_version</em> option to <em>2.9.7.0. </em>Then go to terminal and run:</p>
+```bash
+$ sudo pulledpork.pl -c /etc/pulledpork/pulledpork.conf -l -m /etc/snort/sid-msg.map -P
+```
+<p>The above need to update a snort dynamic rules lying in shared libraries under <em>/usr/lib/snort_dynamicrules</em> to version 2.9.7.0 otherwise snort won&rsquo;t start. After upgrading the snort rules restart snort service.</p>
+<p>If you are not using PulledPork for updating snort rules, you will need to do it manually.</p>
