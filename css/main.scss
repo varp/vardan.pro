@@ -1,0 +1,34 @@
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+  padding-top: 3.5rem;
+}
+
+.rss-subscribe {
+    float: right;
+    clear: both;
+}
+
+.post-list {
+
+    .post-title {
+        span {
+            text-align: right;
+            float: right;
+            clear: both;
+            color: #cccccc;
+            font-size: 80%;
+        }
+
+        &::after {
+            clear: both;
+        }
+    }
+
+    .post-image {
+        border-radius: 50%;
+    }
+}
+
+.post {
+    
+}

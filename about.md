@@ -4,15 +4,14 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hello! My name is Vardan Pogosian. I am a software developer and IT consultant living in Moscow.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I am doing a lot of backend stuff and a little bit of DevOps. Also I am managing a small group of developers on a daily basis as a team lead.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Love coding on Go, Ruby and JS.
 
+I contributing to several OpenSource projects: [Nodejs plugin for SublimeText 3](https://github.com/varp/SublimeText-Nodejs), [pgweb - PostgreSQL web interface](https://github.com/varp/pgweb) and several other pinned to my [GitHub Profile](https://github.com/varp)
 
-[jekyll-organization]: https://github.com/jekyll
+Here is my social links: [VK](https://vk.com/dark_vardan), [Twitter](https://twitter.com/varpt), [Instagram](https://instagram.com/warrpp)
+
+Here is my email: me (at) vardan.pro
