@@ -1,43 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
     {% include head.html %}
 
     <body>
 
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                  <a class="dropdown-item" href="#">VK</a>
-                  <a class="dropdown-item" href="#">GitHub</a>
-                  <a class="dropdown-item" href="#">Twitter</a>
-                  <a class="dropdown-item" href="#">Instagramm</a>
+    <div class="container">
+      
+        <header class="header clearfix">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 class="site-name"><a href="/">{{ site.title }}</a></h3>
                 </div>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-          </div>
-        </nav>
+                <div class="col-md-6">
+                    <h4 clsss="site-profile">{{ site.profile }}</h4>
+                </div>
+                <div class="col-md-2">                
+                    <div class="site-social">
+                        {% if site.vkontakte_username %}
+                        <a href="https://vk.com/{{ site.vkontakte_username }}"><img src="/img/vkontakte.svg"></a>
+                        {% endif %}
+                        {% if site.github_username %}
+                        <a href="https://github.com/{{ site.github_username }}"><img src="/img/github.svg"></a>
+                        {% endif %}
+                        {% if site.twitter_username %}
+                        <a href="https://twitter.com/{{ site.twitter_username }}"><img src="/img/twitter.svg"></a>
+                        {% endif %}
+                        {% if site.instagram_username %}
+                        <a href="https://instagram.com/{{ site.instagram_username }}"><img src="/img/instagram.svg"></a>
+                        {% endif %}
+                    </div>                
+                </div>
+            </div>
+        </header>
 
         <main role="main">
 

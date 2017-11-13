@@ -4,11 +4,11 @@ title: Script for guessing MySQL table charset and collation
 image: "/content/images/2017/07/mysql_charset_guessing.png"
 date: '2017-07-10 17:40:26'
 tags:
-- bash
-- mysql
-- charset
-- collation
-- script
+    - bash
+    - mysql
+    - charset
+    - collation
+    - script
 ---
 
 ## Intro
