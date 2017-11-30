@@ -74,6 +74,9 @@ integration) services such as Travis Ci and Appveyor. Bang! I used it as well as
 tests. Now we can test plugin functionality on different platforms with a 
 different versions of NodeJs.
 
-With the help of all the stuff listed above we can develop new or bugfixing 
-old functionality with enjoy.🕺
+With the help of all the stuff listed above, we can develop new or bug fixing 
+old functionality with enjoying.🕺
+
+### User experience
+
 
