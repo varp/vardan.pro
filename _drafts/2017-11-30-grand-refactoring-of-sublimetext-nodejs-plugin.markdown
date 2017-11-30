@@ -10,7 +10,10 @@ tags:
     - plugin
 ---
 
-# Intro
+I'm very happy to announce the second version of NodeJs Sublime Text plugin. 
+This is big release with a big refactorings and new features.
+
+## Intro
 
 On November 2016 I've started to support (this is said very strongly), 
 started to play around with SublimeText NodeJs plugin. The plugin was very 
@@ -18,7 +21,7 @@ small and has several bugs and unknown issue under the hood.
 
 In those days I was playing around with NodeJs and favorite code editor was 
 SublimeText, as always. I installed NodeJs plugin from 
-(packagecontrol.io)[https://packagecontrol.io] and found several bugs as I 
+[packagecontrol.io](https://packagecontrol.io) and found several bugs as I 
 mentioned earlier. I thought... Ohh, this is awful, take in count that NodeJs
 was a hype, and still the hype, but nowadays with a small pressure of Go.
 
@@ -29,4 +32,48 @@ issues, but with no answer from the maintainer. Then, I thought... There is a
 two piece of technology which I love, and I always want to contribute to the 
 Open Source. No sooner said than done. 
 
-The plan was simple. Fixing bugs which I will encounter with. 
+The plan was simple. Fixing bugs which I will encounter with. Over time, I 
+realized problem in fixing bugs, because of plugin architecture, missing of 
+tests, debugging capabilities etc.
+
+## The plans is changing
+
+As I mentioned earlier I was suffering without tests and debug capabilities. 
+One bug fix could fork another bugs and issues. More over, some bugs could be 
+fixed on one platform and still exists on another ones. Then I decided to make 
+my life easier and makes me more happier.
+
+## What was done
+
+A lot stuff was refactored and reconsidered. All changes logical could be 
+divided in two groups: for user experience and for developer comfort.
+
+### Developer comfort
+Lets start with a list of changes and little explanation for what, how and 
+possible why it was done.
+- The whole code of plugin in earlier versions was located at one big file 
+`Nodejs.py`. Will make decision to divide and re-locate the whole code to base 
+into logical modules and move into `lib` folder. Now he have the following 
+logical parts:
+    1. `nodejs_base.py` - base command classes for the rest of Sublime Text commands
+    2. `nodejs_comamnd_thread.py` - class for running underlying OS specific commands
+    3. `nodejs_commands.py` - core classes for the plugin functionality (node_run, node_drun and etc.)
+    4. `nodejs_constants.py` - several constants for PLUGIN_PATH and etc.
+    5. `nodejs_debug.py` - debugging functions
+    6. `nodejs_nvm.py` - class for detecting and working with NVM (NodeJs Version Manager)
+- Added debugging capabilities. Throughout of the code you call `debug` functions 
+to output some of debug data to the Sublime Text console. The data will be printed 
+only if file `.debug_plugin` exists in the plugin root directory. Simple remove 
+the file to disable debug output.
+- Unit testing was introduced with help of great job done by [Randy3k](https://github.com/randy3k/UnitTesting).
+This is a great module for writing acceptance tests for Sublime Text 
+plugins. You can also use it to write simple plain unit tests for core parts 
+of your plugin using plain old Python.
+- The Randy3k unit testing plugin also allow you to run tests in CI (continuous 
+integration) services such as Travis Ci and Appveyor. Bang! I used it as well as 
+tests. Now we can test plugin functionality on different platforms with a 
+different versions of NodeJs.
+
+With the help of all the stuff listed above we can develop new or bugfixing 
+old functionality with enjoy.🕺
+
