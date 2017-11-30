@@ -56,7 +56,7 @@ possible why it was done.
 into logical modules and move into `lib` folder. Now he have the following 
 logical parts:
     1. `nodejs_base.py` - base command classes for the rest of Sublime Text commands
-    2. `nodejs_comamnd_thread.py` - class for running underlying OS specific commands
+    2. `nodejs_command_thread.py` - classes for running underlying OS specific commands
     3. `nodejs_commands.py` - core classes for the plugin functionality (node_run, node_drun and etc.)
     4. `nodejs_constants.py` - several constants for PLUGIN_PATH and etc.
     5. `nodejs_debug.py` - debugging functions
