@@ -77,6 +77,9 @@ integration) services such as Travis Ci and Appveyor. Bang! I used it as well as
 tests. Now we can test plugin functionality on different platforms with a 
 different versions of NodeJs.
 
+- Plugin now requires dependencies to be installed: `sheellenv` and `newterm`, 
+which means after installing the plugin the Sublime Text will be restarted.
+
 With the help of all the stuff listed above, we can develop new or bug fixing 
 old functionality with enjoying.🕺
 
@@ -90,9 +93,9 @@ It's not beta now.
 
 - The most annoying (I think there was around 3-4 bugs related with it) incorrect 
 auto complete. Sometimes it had replaced the part before dot: `os.chdir()`, 
-`chdir()` replaced the `os.` part. Sometimes it had duplicate the part after a 
-dot: `http.createServer()` duplicate the `http` part. The issue was solved by 
-rewrite `tools\doc_builder.js` by adding NodeJs standard library modules names 
+`chdir()` replaced the `os.` part. Sometimes it had duplicated the part after a 
+dot: `http.createServer()` duplicated the `http` part. The issue was solved by 
+rewrite `tools/doc_builder.js` by adding NodeJs standard library modules names 
 to the `Nodejs.sublime-completions` as a separate auto complete items.
 
 - Now, on the plugin loading, it detects if a Node Version Manager is installed 
@@ -109,4 +112,23 @@ will need to install it manually.
 - At the core plugin, now, detects different versions of NodeJs. At the moment 
 of release it is a NodeJs 6 branch and 8 branch aka LTS and current stable.
 
--  
+- Plugin settings now opens in style of Sublime Text 3, by `edit_settings` 
+commands, default settings on the left side and user custom settings on the right 
+side
+
+- From now, commands ('node_drun', 'node_npm_install' and etc.) could be run only 
+when type or the buffer/file is type of `source.js`
+
+- 
+
+## What need to be done
+
+- Recreate functionality of NodeJs cli debugger using Sublime Text 3 dependency - 
+[sublime-pexpect](https://github.com/varp/sublime-pexpect), which I contributed 
+to [packagecontrol.io](packagecontrol.io) recently.
+
+- Track NodeJs process ran by the plugin and kill only that processes in 
+`_kill_node_processes()`. For that, need to be done work by contributing another 
+Python package to the Sublime package control - (sublime-psutil)[https://github.com/varp/sublime-psutil].
+
+- 
