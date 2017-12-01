@@ -61,14 +61,17 @@ logical parts:
     4. `nodejs_constants.py` - several constants for PLUGIN_PATH and etc.
     5. `nodejs_debug.py` - debugging functions
     6. `nodejs_nvm.py` - class for detecting and working with NVM (NodeJs Version Manager)
+
 - Added debugging capabilities. Throughout of the code you call `debug` functions 
 to output some of debug data to the Sublime Text console. The data will be printed 
 only if file `.debug_plugin` exists in the plugin root directory. Simple remove 
 the file to disable debug output.
+
 - Unit testing was introduced with help of great job done by [Randy3k](https://github.com/randy3k/UnitTesting).
 This is a great module for writing acceptance tests for Sublime Text 
 plugins. You can also use it to write simple plain unit tests for core parts 
 of your plugin using plain old Python.
+
 - The Randy3k unit testing plugin also allow you to run tests in CI (continuous 
 integration) services such as Travis Ci and Appveyor. Bang! I used it as well as 
 tests. Now we can test plugin functionality on different platforms with a 
@@ -79,4 +82,31 @@ old functionality with enjoying.🕺
 
 ### User experience
 
+Ok. We got to the most interest part - user interaction with plugin. As in 
+previous part I will list of changes and reasons for it.
+- It sad to say, but from now we only support Sublime Text 3. Sublime Text 2 
+support is deprecated, because of long waited Sublime Text 3 official release.
+It's not beta now.
 
+- The most annoying (I think there was around 3-4 bugs related with it) incorrect 
+auto complete. Sometimes it had replaced the part before dot: `os.chdir()`, 
+`chdir()` replaced the `os.` part. Sometimes it had duplicate the part after a 
+dot: `http.createServer()` duplicate the `http` part. The issue was solved by 
+rewrite `tools\doc_builder.js` by adding NodeJs standard library modules names 
+to the `Nodejs.sublime-completions` as a separate auto complete items.
+
+- Now, on the plugin loading, it detects if a Node Version Manager is installed 
+and if it is, it gets current Node version from the NVM and use it by default 
+instead of globally installed one, if any.
+
+- Also, on the plugin loading, it build completions list for a current version of 
+NodeJs
+
+- On the plugin loading, it install all NodeJs dependencies need for plugin tools, 
+located under `tools` folder: `doc_builder.js` and `uglify_js.js`. Before, you 
+will need to install it manually.
+
+- At the core plugin, now, detects different versions of NodeJs. At the moment 
+of release it is a NodeJs 6 branch and 8 branch aka LTS and current stable.
+
+-  
