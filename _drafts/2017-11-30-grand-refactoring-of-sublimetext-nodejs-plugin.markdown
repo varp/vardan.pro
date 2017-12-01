@@ -121,7 +121,7 @@ when type or the buffer/file is type of `source.js`
 
 - OK. What is the most important tool of every developer? You, right! 
 
-### It is a *debugger*. 
+### It is a __debugger__*. 
 
 In previous versions of the plugin, Nodejs Debug (+ arguments)
 command would run only current file with a `debug` argument passed to `node` 
@@ -134,10 +134,12 @@ NodeJs and `--inspect-brk=localhost:60123` for version 8. As you can see, debugg
 would run on a separate port 60123 which is not with the default NodeJs - 9229.
 
 Then, you can connect to the debugger using steps instructed by the plugin:
+```
     Debugger is successfully started at localhost:60123.
     1. Now you can open Google Chrome and navigate to chrome://inspect.
     2. Then click Open dedicated DevTools for Node. 
     3. After click Add connection and add connection to localhost:60123
+```
 
 ## What need to be done
 
