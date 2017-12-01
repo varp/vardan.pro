@@ -119,9 +119,9 @@ side
 - From now, commands ('node_drun', 'node_npm_install' and etc.) could be run only 
 when type or the buffer/file is type of `source.js`
 
-- OK. What is the most important tool of every developer? You, right! 
+- OK. What is the most important tool of every developer? You, right! It's a debugger.
 
-### It is a *debugger*. 
+### *debugger* 
 
 In previous versions of the plugin, Nodejs Debug (+ arguments)
 command would run only current file with a `debug` argument passed to `node` 
@@ -143,13 +143,13 @@ Then, you can connect to the debugger using steps instructed by the plugin:
 
 ## What need to be done
 
-- Recreate functionality of NodeJs cli debugger using Sublime Text 3 dependency - 
+- [ ] Recreate functionality of NodeJs cli debugger using Sublime Text 3 dependency - 
 [sublime-pexpect](https://github.com/varp/sublime-pexpect), which I contributed 
 to [packagecontrol.io](packagecontrol.io) recently.
 
-- Track NodeJs process ran by the plugin and kill only that processes in 
+- [ ] Track NodeJs process ran by the plugin and kill only that processes in 
 `_kill_node_processes()`. For that, need to be done work by contributing another 
 Python package to the Sublime package control - (sublime-psutil)[https://github.com/varp/sublime-psutil].
 
-- Run current JS file in new terminal, instead of output to the Sublime Text 
+- [ ] Run current JS file in new terminal, instead of output to the Sublime Text 
 output panel.
