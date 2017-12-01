@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Grand refactoring of SublimeText Nodejs plugin
-image: "/content/images/2017/07/mysql_charset_guessing.png"
 date: '2017-11-30 8:58:26'
 tags:
     - sublimetext
@@ -121,7 +120,7 @@ when type or the buffer/file is type of `source.js`
 
 - OK. What is the most important tool of every developer? You, right! It's a debugger.
 
-### *debugger* 
+### *Debugger* 
 
 In previous versions of the plugin, Nodejs Debug (+ arguments)
 command would run only the current file with a `debug` argument passed to `node` 
@@ -134,7 +133,7 @@ Nodejs and `--inspect-brk=localhost:60123` for version 8. As you can see, debugg
 would run on a separate port 60123 which is not with the default Nodejs - 9229.
 
 Then, you can connect to the debugger using steps instructed by the plugin:
-```
+```text
     Debugger is successfully started at localhost:60123.
     1. Now you can open Google Chrome and navigate to chrome://inspect.
     2. Then click Open dedicated DevTools for Node. 
@@ -143,13 +142,13 @@ Then, you can connect to the debugger using steps instructed by the plugin:
 
 ## What need to be done
 
-- [ ] Recreate functionality of Nodejs cli debugger using Sublime Text 3 dependency - 
+- Recreate functionality of Nodejs cli debugger using Sublime Text 3 dependency - 
 [sublime-pexpect](https://github.com/varp/sublime-pexpect), which I contributed 
-to [packagecontrol.io](packagecontrol.io) recently.
+to [packagecontrol.io](https://packagecontrol.io) recently.
 
-- [ ] Track Nodejs processes ran by the plugin and kill only that processes in 
+- Track Nodejs processes ran by the plugin and kill only that processes in 
 `_kill_node_processes()`. For that, need to be done work by contributing another 
-Python package to the Sublime package control - (sublime-psutil)[https://github.com/varp/sublime-psutil].
+Python package to the Sublime package control - [sublime-psutil](https://github.com/varp/sublime-psutil).
 
-- [ ] Run current JS file in new terminal, instead of output to the Sublime Text 
+- Run current JS file in new terminal, instead of output to the Sublime Text 
 output panel.
