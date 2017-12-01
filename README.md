@@ -1,2 +1,2 @@
 # vardan.pro
-My blog
+My blog - https://vardan.pro
