@@ -80,7 +80,7 @@ different versions of Nodejs.
 which means after installing the plugin the Sublime Text will be restarted.
 
 With the help of all the stuff listed above, we can develop new or bug fixing 
-old functionality with enjoying.🕺
+old functionality by enjoying.🕺
 
 ### User experience
 
