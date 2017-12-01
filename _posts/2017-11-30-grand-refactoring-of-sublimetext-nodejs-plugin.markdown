@@ -22,7 +22,7 @@ In those days I was playing around with Nodejs and favorite code editor was
 SublimeText, as always. I installed Nodejs plugin from 
 [packagecontrol.io](https://packagecontrol.io) and found several bugs as I 
 mentioned earlier. I thought... Ohh, this is awful, take in count that Nodejs
-was a hype, and still the hype, but nowadays with a small pressure of Go.
+was a hype, and still the hype, but nowadays with a small pressure of Go. IMHO. 😇
 
 In a such situation I directly go the GitHub repository of the project and 
 looking for recent activity, to be sure that project is not abandoned. I saw 
