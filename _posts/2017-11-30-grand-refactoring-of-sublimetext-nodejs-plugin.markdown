@@ -54,12 +54,12 @@ possible why it was done.
 `Nodejs.py`. Will make decision to divide and re-locate the whole code to base 
 into logical modules and move into `lib` folder. Now he have the following 
 logical parts:
-    1. `Nodejs_base.py` - base command classes for the rest of Sublime Text commands
-    2. `Nodejs_command_thread.py` - classes for running underlying OS specific commands
-    3. `Nodejs_commands.py` - core classes for the plugin functionality (node_run, node_drun and etc.)
-    4. `Nodejs_constants.py` - several constants for PLUGIN_PATH and etc.
-    5. `Nodejs_debug.py` - debugging functions
-    6. `Nodejs_nvm.py` - class for detecting and working with NVM (Nodejs Version Manager)
+    1. `nodejs_base.py` - base command classes for the rest of Sublime Text commands
+    2. `nodejs_command_thread.py` - classes for running underlying OS specific commands
+    3. `nodejs_commands.py` - core classes for the plugin functionality (node_run, node_drun and etc.)
+    4. `nodejs_constants.py` - several constants for PLUGIN_PATH and etc.
+    5. `nodejs_debug.py` - debugging functions
+    6. `nodejs_nvm.py` - class for detecting and working with NVM (Nodejs Version Manager)
 
 - Added debugging capabilities. Throughout of the code you call `debug` functions 
 to output some of debug data to the Sublime Text console. The data will be printed 
