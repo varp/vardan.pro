@@ -15,7 +15,7 @@ This is big release with a big refactorings and new features.
 ## Intro
 
 On November 2016 I've started to support (this is said very strongly), 
-started to play around with SublimeText Nodejs plugin. The plugin was very 
+started to play around with SublimeText [Nodejs plugin](https://packagecontrol.io/packages/Nodejs). The plugin was very 
 small and has several bugs and unknown issue under the hood.
 
 In those days I was playing around with Nodejs and favorite code editor was 
