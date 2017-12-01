@@ -119,7 +119,25 @@ side
 - From now, commands ('node_drun', 'node_npm_install' and etc.) could be run only 
 when type or the buffer/file is type of `source.js`
 
-- 
+- OK. What is the most important tool of every developer? You, right! 
+
+### It is a *debugger*. 
+
+In previous versions of the plugin, Nodejs Debug (+ arguments)
+command would run only current file with a `debug` argument passed to `node` 
+executable. It was a useless. Since version 6.3.0 of NodeJs it support debugging 
+using Chrome DevTools debugger. Read more at [Paul Irish Medium blog](https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27).
+
+Now, when you run Nodejs Debug (+ arguments) the `node` executable will run 
+current file with flags `--inspect=localhost:60123 --debug-brk` for version 6 of 
+NodeJs and `--inspect-brk=localhost:60123` for version 8. As you can see, debugger 
+would run on a separate port 60123 which is not with the default NodeJs - 9229.
+
+Then, you can connect to the debugger using steps instructed by the plugin:
+    Debugger is successfully started at localhost:60123.
+    1. Now you can open Google Chrome and navigate to chrome://inspect.
+    2. Then click Open dedicated DevTools for Node. 
+    3. After click Add connection and add connection to localhost:60123
 
 ## What need to be done
 
@@ -131,4 +149,5 @@ to [packagecontrol.io](packagecontrol.io) recently.
 `_kill_node_processes()`. For that, need to be done work by contributing another 
 Python package to the Sublime package control - (sublime-psutil)[https://github.com/varp/sublime-psutil].
 
-- 
+- Run current JS file in new terminal, instead of output to the Sublime Text 
+output panel.
