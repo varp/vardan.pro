@@ -121,7 +121,7 @@ when type or the buffer/file is type of `source.js`
 
 - OK. What is the most important tool of every developer? You, right! 
 
-### It is a __debugger__*. 
+### It is a *debugger*. 
 
 In previous versions of the plugin, Nodejs Debug (+ arguments)
 command would run only current file with a `debug` argument passed to `node` 
