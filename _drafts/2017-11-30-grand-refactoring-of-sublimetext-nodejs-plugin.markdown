@@ -124,7 +124,7 @@ when type or the buffer/file is type of `source.js`
 ### *debugger* 
 
 In previous versions of the plugin, Nodejs Debug (+ arguments)
-command would run only current file with a `debug` argument passed to `node` 
+command would run only the current file with a `debug` argument passed to `node` 
 executable. It was a useless. Since version 6.3.0 of NodeJs it support debugging 
 using Chrome DevTools debugger. Read more at [Paul Irish Medium blog](https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27).
 
