@@ -112,7 +112,7 @@ will need to install it manually.
 of release it is a Nodejs 6 branch and 8 branch aka LTS and current stable.
 
 - Plugin settings now opens in style of Sublime Text 3, by `edit_settings` 
-commands, default settings on the left side and user custom settings on the right 
+command, default settings on the left side and user custom settings on the right 
 side
 
 - From now, commands ('node_drun', 'node_npm_install' and etc.) could be run only 
@@ -129,8 +129,9 @@ using Chrome DevTools debugger. Read more at [Paul Irish Medium blog](https://me
 
 Now, when you run Nodejs Debug (+ arguments) the `node` executable will run 
 current file with flags `--inspect=localhost:60123 --debug-brk` for version 6 of 
-Nodejs and `--inspect-brk=localhost:60123` for version 8. As you can see, debugger 
-would run on a separate port 60123 which is not with the default Nodejs - 9229.
+Nodejs and `--inspect-brk=localhost:60123` for version 8. As you can see, 
+debugger would run on a separate port 60123 which is not correlate with 
+ the default Nodejs - 9229.
 
 Then, you can connect to the debugger using steps instructed by the plugin:
 ```text
