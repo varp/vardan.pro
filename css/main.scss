@@ -96,28 +96,17 @@ body {
 .header {
   font-family: 'Monofett', cursive;
 
-  h3 {
-    color: black;
-    font-size: 2rem;
-    vertical-align: middle;
+  .site-logo {
+    width: 200px;
+  }
 
+  .site-profile {
+    color: black;
+    font-size: 1.7rem;
+    vertical-align: middle;
     a {
       text-decoration: none;
       color: #0056b3;
-    }
-  }
-
-  .site-social {
-    padding: 0px;
-    vertical-align: middle;
-    line-height: 50px;
-
-    a {
-      display: inline-block;
-    }
-
-    img {
-      width: 20px;
     }
   }
 
@@ -130,14 +119,14 @@ body {
 .post-list {
 
     .post-title {
-        
+
         font-size: 1.2rem !important;
 
         a {
           color: black;
           text-decoration: underline;
         }
-  
+
         span {
             text-align: right;
             float: right;
@@ -165,4 +154,23 @@ body {
 
 .footer {
   margin-top: 40px;
+
+}
+
+.site-social {
+  padding: 0px;
+  vertical-align: middle;
+  line-height: 50px;
+
+  a {
+    display: inline-block;
+  }
+
+  img {
+    width: 20px;
+
+    &.correct {
+        width: 24px;
+    }
+  }
 }

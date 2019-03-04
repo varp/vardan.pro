@@ -1,0 +1,19 @@
+<div>
+    <div class="site-social">
+        {% if site.vkontakte_username %}
+        <a target="_blank" rel="nofollow" title="Vkontake" href="https://vk.com/{{ site.vkontakte_username }}"><img src="/img/vkontakte.svg"></a>
+        {% endif %}
+        {% if site.facebook_username %}
+        <a target="_blank" rel="nofollow" title="Facebook" href="https://facebook.com/{{ site.facebook_username }}"><img src="/img/facebook.svg" class="correct"></a>
+        {% endif %}
+        {% if site.github_username %}
+        <a target="_blank" rel="nofollow" title="GitHub" href="https://github.com/{{ site.github_username }}"><img src="/img/github.svg"></a>
+        {% endif %}
+        {% if site.twitter_username %}
+        <a target="_blank" rel="nofollow" title="Twitter" href="https://twitter.com/{{ site.twitter_username }}"><img src="/img/twitter.svg" class="correct"></a>
+        {% endif %}
+        {% if site.instagram_username %}
+        <a target="_blank" rel="nofollow" title="Instagram" href="https://instagram.com/{{ site.instagram_username }}"><img src="/img/instagram.svg"></a>
+        {% endif %}
+    </div>
+</div>

@@ -6,30 +6,14 @@
     <body>
 
     <div class="container">
-      
+
         <header class="header clearfix">
             <div class="row">
                 <div class="col-md-4">
-                    <h3 class="site-name"><a href="/">{{ site.title }}</a></h3>
+                    <a href="/"><img src="/img/vardan_pro_corr.png" title="{{ site.title }}" class="site-logo"></a>
                 </div>
-                <div class="col-md-6">
-                    <h4 clsss="site-profile">{{ site.profile }}</h4>
-                </div>
-                <div class="col-md-2">                
-                    <div class="site-social">
-                        {% if site.vkontakte_username %}
-                        <a target="_blank" href="https://vk.com/{{ site.vkontakte_username }}"><img src="/img/vkontakte.svg"></a>
-                        {% endif %}
-                        {% if site.github_username %}
-                        <a target="_blank" href="https://github.com/{{ site.github_username }}"><img src="/img/github.svg"></a>
-                        {% endif %}
-                        {% if site.twitter_username %}
-                        <a target="_blank" href="https://twitter.com/{{ site.twitter_username }}"><img src="/img/twitter.svg"></a>
-                        {% endif %}
-                        {% if site.instagram_username %}
-                        <a target="_blank" href="https://instagram.com/{{ site.instagram_username }}"><img src="/img/instagram.svg"></a>
-                        {% endif %}
-                    </div>                
+                <div class="col-md-8">
+                    <h3 class="site-profile">{{ site.profile }}</h3>
                 </div>
             </div>
         </header>
@@ -41,7 +25,7 @@
         </main>
 
     {% include footer.html %}
-        
+
     </body>
-    
+
 {% include foot.html %}
