@@ -3,13 +3,13 @@
     "short_name": "vardan.pro",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png?v=7kodlM4wL4",
+            "src": "/android-chrome-192x192.png?v=3e8dROA85o",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-384x384.png?v=7kodlM4wL4",
-            "sizes": "384x384",
+            "src": "/android-chrome-512x512.png?v=3e8dROA85o",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ],
